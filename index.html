@@ -306,23 +306,27 @@
       padding: 40px 48px;
     }
     .stats-inner {
-      max-width: 900px;
+      max-width: 700px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0;
       text-align: center;
     }
-    .stat-item { padding: 20px 8px; border-bottom: 1px solid var(--border); }
-    .stat-item:nth-child(odd):not(.stat-item--hero) { border-right: 1px solid var(--border); }
-    .stat-item:nth-last-child(-n+2):not(.stat-item--hero) { border-bottom: none; }
+    .stat-item { padding: 28px 16px; }
     .stat-item--hero {
       grid-column: 1 / -1;
-      border-right: none;
-      padding: 24px 8px 28px;
+      padding: 24px 16px 32px;
+      border-bottom: 1px solid var(--border);
     }
     .stat-item--hero .stat-num { font-size: 42px; }
     .stat-item--hero .stat-label { font-size: 14px; }
+    /* vertical divider — right column */
+    .stat-item:nth-child(3),
+    .stat-item:nth-child(5) { border-left: 1px solid var(--border); }
+    /* horizontal divider — bottom row */
+    .stat-item:nth-child(4),
+    .stat-item:nth-child(5) { border-top: 1px solid var(--border); }
     .stat-num {
       font-size: 30px;
       font-weight: 800;
